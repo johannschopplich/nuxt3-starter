@@ -1,0 +1,52 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "nuxi dev",
+    "build": "nuxi build",
+    "start": "node .output/server/index.mjs",
+    "lint": "eslint \"**/*.{ts,vue}\" --ignore-path .gitignore",
+    "lint:fix": "pnpm run lint -- --fix",
+    "format": "prettier \"**/*.{css,html,json,md,ts,tsx,vue,yml}\" --write --ignore-path .gitignore",
+    "prepare": "pnpm exec simple-git-hooks"
+  },
+  "lint-staged": {
+    "**/*.{ts,vue}": "eslint --cache --ignore-path .gitignore"
+  },
+  "simple-git-hooks": {
+    "commit-msg": "pnpm exec esno scripts/verifyCommit.ts $1",
+    "pre-commit": "pnpm exec lint-staged"
+  },
+  "dependencies": {
+    "pinia": "^2.0.11"
+  },
+  "devDependencies": {
+    "@iconify-json/carbon": "^1.1.1",
+    "@pinia/nuxt": "^0.1.8",
+    "@types/node": "^17.0.21",
+    "@typescript-eslint/eslint-plugin": "^5.12.1",
+    "@typescript-eslint/parser": "^5.12.1",
+    "@unocss/nuxt": "^0.26.4",
+    "@vueuse/nuxt": "^7.7.0",
+    "eslint": "^8.10.0",
+    "eslint-config-prettier": "^8.4.0",
+    "eslint-plugin-vue": "^8.5.0",
+    "esno": "^0.14.1",
+    "lint-staged": "^12.3.4",
+    "nuxt3": "latest",
+    "picocolors": "^1.0.0",
+    "prettier": "^2.5.1",
+    "simple-git-hooks": "^2.7.0",
+    "typescript": "^4.5.5",
+    "unocss": "^0.26.4"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "postcss",
+        "rollup",
+        "vue",
+        "webpack"
+      ]
+    }
+  }
+}
