@@ -24,7 +24,6 @@
       "error",
       { "prefer": "type-imports" }
     ],
-    "vue/multi-word-component-names": "off",
-    "vue/script-setup-uses-vars": "error"
+    "vue/multi-word-component-names": "off"
   }
 }

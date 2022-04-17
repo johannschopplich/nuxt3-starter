@@ -8,8 +8,10 @@ export default defineNuxtConfig({
 
   buildModules: ['@pinia/nuxt', '@unocss/nuxt', '@vueuse/nuxt'],
 
-  publicRuntimeConfig: {
-    DEPLOYMENT_ENVIRONMENT: 'local',
+  runtimeConfig: {
+    public: {
+      deploymentEnvironment: 'dev',
+    },
   },
 
   unocss: {
