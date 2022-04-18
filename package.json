@@ -42,8 +42,6 @@
   "pnpm": {
     "peerDependencyRules": {
       "ignoreMissing": [
-        "postcss",
-        "rollup",
         "vue",
         "webpack",
         "vite"

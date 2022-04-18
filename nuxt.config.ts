@@ -6,7 +6,7 @@ export default defineNuxtConfig({
     title: 'Nuxt 3 Starter',
   },
 
-  buildModules: ['@pinia/nuxt', '@unocss/nuxt', '@vueuse/nuxt'],
+  modules: ['@pinia/nuxt', '@unocss/nuxt', '@vueuse/nuxt'],
 
   runtimeConfig: {
     public: {
