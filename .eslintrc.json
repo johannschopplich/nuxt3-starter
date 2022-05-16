@@ -12,14 +12,24 @@
     "plugin:vue/vue3-recommended",
     "prettier"
   ],
-  "parser": "vue-eslint-parser",
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "parser": "@typescript-eslint/parser",
     "ecmaVersion": 13,
     "sourceType": "module"
   },
+  "overrides": [
+    {
+      "files": ["*.vue"],
+      "parser": "vue-eslint-parser",
+      "parserOptions": {
+        "parser": "@typescript-eslint/parser"
+      },
+      "rules": {
+        "no-undef": "off"
+      }
+    }
+  ],
   "rules": {
-    "no-undef": "off",
     "@typescript-eslint/consistent-type-imports": [
       "error",
       { "prefer": "type-imports" }
