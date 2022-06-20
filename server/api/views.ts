@@ -1,8 +1,7 @@
 const startAt = Date.now()
 let count = 0
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export default defineEventHandler((event) => {
+export default defineEventHandler(() => {
   return {
     views: count++,
     startAt,
