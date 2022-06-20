@@ -2,10 +2,6 @@ import { defineNuxtConfig } from 'nuxt'
 
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
-  head: {
-    title: 'Nuxt 3 Starter',
-  },
-
   modules: ['@pinia/nuxt', '@unocss/nuxt', '@vueuse/nuxt'],
 
   runtimeConfig: {
