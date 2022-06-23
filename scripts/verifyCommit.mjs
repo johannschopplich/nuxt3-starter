@@ -1,11 +1,11 @@
 // @ts-check
-// Invoked on the `commit-msg` git hook by simple-git-hooks.
+// Invoked on the `commit-msg` git hook by simple-git-hooks
 // Modified from https://github.com/vitejs/vite/blob/main/scripts/verifyCommit.ts
 
-import { readFileSync } from 'fs'
-import chalk from 'chalk'
+import { readFileSync } from 'node:fs'
+import colors from 'picocolors'
 
-// Get `$1` from `commit-msg` script
+// Get $1 from commit-msg script
 const msgPath = process.argv[2]
 const msg = readFileSync(msgPath, 'utf-8').trim()
 
@@ -16,16 +16,15 @@ const COMMIT_RE =
 if (!RELEASE_RE.test(msg) && !COMMIT_RE.test(msg)) {
   console.log()
   console.error(
-    `  ${chalk.bgRed(chalk.white(' ERROR '))} ${chalk.red(
+    `  ${colors.bgRed(colors.white(' ERROR '))} ${colors.red(
       `invalid commit message format.`
     )}\n\n` +
-      chalk.red(
+      colors.red(
         `  Proper commit message format is required for automated changelog generation. Examples:\n\n`
       ) +
-      `    ${chalk.green(`feat: add 'comments' option`)}\n` +
-      `    ${chalk.green(`fix: handle events on blur (close #28)`)}\n\n` +
-      chalk.red(`  See .github/commit-convention.md for more details.\n`)
+      `    ${colors.green(`feat: add 'comments' option`)}\n` +
+      `    ${colors.green(`fix: handle events on blur (close #28)`)}\n\n` +
+      colors.red(`  See .github/commit-convention.md for more details.\n`)
   )
-
   process.exit(1)
 }
