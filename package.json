@@ -6,7 +6,7 @@
     "build": "nuxi build",
     "start": "node .output/server/index.mjs",
     "lint": "eslint \"**/*.{ts,vue}\" --ignore-path .gitignore",
-    "lint:fix": "eslint \"**/*.{ts,vue}\" --ignore-path .gitignore --fix",
+    "lint:fix": "npm run lint -- --fix",
     "format": "prettier \"**/*.{css,html,json,md,ts,tsx,vue,yml}\" --write --ignore-path .gitignore",
     "prepare": "pnpm exec simple-git-hooks"
   },
