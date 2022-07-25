@@ -1,7 +1,7 @@
 declare module '@nuxt/schema' {
   interface RuntimeConfig {
     public: {
-      deploymentEnvironment: 'dev' | 'test' | 'qa' | 'prod'
+      deploymentEnvironment: 'dev' | 'stage' | 'prod'
     }
   }
 }

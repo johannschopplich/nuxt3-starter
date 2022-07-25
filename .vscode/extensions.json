@@ -1,6 +1,5 @@
 {
   "recommendations": [
-    "antfu.goto-alias",
     "antfu.unocss",
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
