@@ -1,14 +1,15 @@
 {
   "private": true,
-  "packageManager": "pnpm@7.3.0",
+  "packageManager": "pnpm@7.11.0",
   "scripts": {
     "dev": "nuxi dev",
     "build": "nuxi build",
-    "start": "node .output/server/index.mjs",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
     "lint": "eslint \"**/*.{ts,vue}\" --ignore-path .gitignore",
     "lint:fix": "npm run lint -- --fix",
     "format": "prettier \"**/*.{css,html,json,md,ts,tsx,vue,yml}\" --write --ignore-path .gitignore",
-    "prepare": "pnpm exec simple-git-hooks"
+    "postinstall": "simple-git-hooks && nuxi prepare"
   },
   "lint-staged": {
     "**/*.{ts,vue}": "eslint --cache --ignore-path .gitignore"
@@ -19,23 +20,24 @@
   },
   "devDependencies": {
     "@iconify-json/carbon": "^1.1.7",
-    "@pinia/nuxt": "^0.3.0",
-    "@types/node": "^18.6.1",
-    "@typescript-eslint/eslint-plugin": "^5.30.7",
-    "@typescript-eslint/parser": "^5.30.7",
-    "@unocss/nuxt": "^0.44.7",
-    "@vueuse/nuxt": "^8.9.4",
-    "eslint": "^8.20.0",
+    "@pinia/nuxt": "^0.4.2",
+    "@types/node": "^18.7.16",
+    "@typescript-eslint/eslint-plugin": "^5.36.2",
+    "@typescript-eslint/parser": "^5.36.2",
+    "@unocss/nuxt": "^0.45.18",
+    "@vueuse/nuxt": "^9.2.0",
+    "eslint": "^8.23.0",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-vue": "^9.3.0",
+    "eslint-plugin-tailwindcss": "^3.6.1",
+    "eslint-plugin-vue": "^9.4.0",
     "lint-staged": "^13.0.3",
-    "nuxt": "^3.0.0-rc.6",
+    "nuxt": "^3.0.0-rc.9",
     "picocolors": "^1.0.0",
-    "pinia": "^2.0.16",
+    "pinia": "^2.0.22",
     "prettier": "^2.7.1",
     "simple-git-hooks": "^2.8.0",
-    "typescript": "^4.7.4",
-    "unocss": "^0.44.7"
+    "typescript": "^4.8.3",
+    "unocss": "^0.45.18"
   },
   "pnpm": {
     "peerDependencyRules": {
