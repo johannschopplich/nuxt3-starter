@@ -1,12 +1,12 @@
 <script setup lang="ts">
 const { data } = await useFetch('/api/views')
-const time = useTimeAgo(computed(() => data.value.startAt))
+const time = useTimeAgo(computed(() => data.value?.startAt ?? Date.now()))
 </script>
 
 <template>
   <FeedbackAlert>
     <p>
-      {{ data.views }}
+      {{ data?.views }}
       <span class="font-normal opacity-75">page views since</span>
       {{ time }}
     </p>
