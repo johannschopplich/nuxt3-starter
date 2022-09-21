@@ -1,5 +1,3 @@
-import { defineNuxtConfig } from 'nuxt'
-
 export default defineNuxtConfig({
   modules: ['@pinia/nuxt', '@unocss/nuxt', '@vueuse/nuxt'],
 
@@ -17,7 +15,7 @@ export default defineNuxtConfig({
 
   typescript: {
     strict: true,
-    typeCheck: 'build',
+    typeCheck: true,
     shim: false,
   },
 })

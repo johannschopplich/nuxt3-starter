@@ -19,25 +19,26 @@
     "pre-commit": "pnpm exec lint-staged"
   },
   "devDependencies": {
-    "@iconify-json/carbon": "^1.1.7",
+    "@iconify-json/carbon": "^1.1.8",
     "@pinia/nuxt": "^0.4.2",
-    "@types/node": "^18.7.16",
-    "@typescript-eslint/eslint-plugin": "^5.36.2",
-    "@typescript-eslint/parser": "^5.36.2",
-    "@unocss/nuxt": "^0.45.18",
+    "@types/node": "^18.7.18",
+    "@typescript-eslint/eslint-plugin": "^5.38.0",
+    "@typescript-eslint/parser": "^5.38.0",
+    "@unocss/nuxt": "^0.45.22",
     "@vueuse/nuxt": "^9.2.0",
-    "eslint": "^8.23.0",
+    "eslint": "^8.23.1",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-tailwindcss": "^3.6.1",
-    "eslint-plugin-vue": "^9.4.0",
+    "eslint-plugin-tailwindcss": "^3.6.2",
+    "eslint-plugin-vue": "^9.5.1",
     "lint-staged": "^13.0.3",
-    "nuxt": "^3.0.0-rc.9",
+    "nuxt": "^3.0.0-rc.11",
     "picocolors": "^1.0.0",
     "pinia": "^2.0.22",
     "prettier": "^2.7.1",
     "simple-git-hooks": "^2.8.0",
     "typescript": "^4.8.3",
-    "unocss": "^0.45.18"
+    "unocss": "^0.45.22",
+    "vue-tsc": "^0.40.13"
   },
   "pnpm": {
     "peerDependencyRules": {
