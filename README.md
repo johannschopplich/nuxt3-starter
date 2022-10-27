@@ -17,8 +17,8 @@ Before getting started, please make sure you have installed the recommended setu
 - **Node.js**<sup>\*</sup> (v16, the latest LTS version) 👉 [[Download](https://nodejs.org/en/download/)]
 - **pnpm**<sup>\*</sup> (the fast and disk space efficient package manager) 👉 [[Download](https://pnpm.io/installation#nodejs-is-preinstalled)]
 - **Visual Studio Code** 👉 [[Download](https://code.visualstudio.com/)]
-- **Volar Extension** 👉 [[Download](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)]
-  - Enable [**Take Over Mode**](https://vuejs.org/guide/typescript/overview.html#takeover-mode)
+- **Volar Extension** 👉 [[Download](https://marketplace.visualstudio.com/items?itemName=Vue.volar)]
+  - Enable [**Take Over Mode**](https://vuejs.org/guide/typescript/overview.html#volar-takeover-mode)
 
 ## Setup
 
@@ -30,7 +30,7 @@ pnpm install
 
 ## Development
 
-Start the development server on http://localhost:3000
+Start the development server on [localhost:3000](http://localhost:3000/):
 
 ```bash
 pnpm dev
