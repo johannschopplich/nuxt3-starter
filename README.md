@@ -1,6 +1,6 @@
 # Nuxt 3 Minimal Starter
 
-I recommend to look at the [documentation](https://v3.nuxtjs.org).
+> 📖 [Read the documentation](https://nuxt.com).
 
 ## Key Features
 
@@ -14,7 +14,7 @@ I recommend to look at the [documentation](https://v3.nuxtjs.org).
 
 ### Prerequisites
 
-1. Enable [Corepack](https://github.com/nodejs/corepack) using `corepack enable` (use `npm i -g corepack` for Node.js < 16.10)
+1. Enable [Corepack](https://github.com/nodejs/corepack) using `corepack enable`
 2. Install dependencies using `pnpm install`
 
 ### Development
