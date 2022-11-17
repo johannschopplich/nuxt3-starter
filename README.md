@@ -28,4 +28,4 @@ I recommend to look at the [documentation](https://v3.nuxtjs.org).
 
 Build the application for production with `pnpm build`.
 
-Check out the [deployment documentation](https://v3.nuxtjs.org/docs/deployment).
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment).
