@@ -10,38 +10,22 @@ I recommend to look at the [documentation](https://v3.nuxtjs.org).
 - 🐶 Native Git hooks with [simple-git-hooks](https://github.com/toplenboren/simple-git-hooks)
 - 🚓 [Conventional commits](./.gitlab/commit-convention.md)
 
-## Prerequisites
+## Usage
 
-Before getting started, please make sure you have installed the recommended setup.
+### Prerequisites
 
-- **Node.js**<sup>\*</sup> (v16, the latest LTS version) 👉 [[Download](https://nodejs.org/en/download/)]
-- **pnpm**<sup>\*</sup> (the fast and disk space efficient package manager) 👉 [[Download](https://pnpm.io/installation#nodejs-is-preinstalled)]
-- **Visual Studio Code** 👉 [[Download](https://code.visualstudio.com/)]
-- **Volar Extension** 👉 [[Download](https://marketplace.visualstudio.com/items?itemName=Vue.volar)]
-  - Enable [**Take Over Mode**](https://vuejs.org/guide/typescript/overview.html#volar-takeover-mode)
+1. Enable [Corepack](https://github.com/nodejs/corepack) using `corepack enable` (use `npm i -g corepack` for Node.js < 16.10)
+2. Install dependencies using `pnpm install`
 
-## Setup
+### Development
 
-Make sure to install the dependencies
+1. Start the development server using `pnpm run dev`
+2. Visit [localhost:3000](http://localhost:3000/)
 
-```bash
-pnpm install
-```
+> ℹ️ Enable [Take Over Mode](https://vuejs.org/guide/typescript/overview.html#takeover-mode) in Visual Studio Code.
 
-## Development
+### Production
 
-Start the development server on [localhost:3000](http://localhost:3000/):
-
-```bash
-pnpm dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-pnpm build
-```
+Build the application for production with: `pnpm build`.
 
 Check out the [deployment documentation](https://v3.nuxtjs.org/docs/deployment).
