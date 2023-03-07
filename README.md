@@ -8,7 +8,7 @@
 - 📐 Prettier & ESLint
 - 🔢 Pre-configured [VSCode settings](./.vscode/settings.json)
 - 🐶 Native Git hooks with [simple-git-hooks](https://github.com/toplenboren/simple-git-hooks)
-- 🚓 [Conventional commits](./.gitlab/commit-convention.md)
+- 🚓 [Conventional commits](./.github/commit-convention.md)
 
 ## Usage
 
