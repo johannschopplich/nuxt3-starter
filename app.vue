@@ -10,7 +10,6 @@
       </main>
 
       <AppModals />
-      <AppEnvironment />
     </Body>
   </Html>
 </template>
