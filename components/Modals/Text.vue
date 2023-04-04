@@ -16,7 +16,7 @@ function close(value?: string | MouseEvent) {
 
 <template>
   <AppModalWrapper @close="close">
-    <div class="space-y-3">
+    <div class="space-y-4">
       <div class="text-center">
         <h3
           id="modal-title"
@@ -24,7 +24,7 @@ function close(value?: string | MouseEvent) {
         >
           Edit text
         </h3>
-        <p class="text-sm text-gray-500">
+        <p class="mt-2 text-sm text-gray-500">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
           amet labore.
         </p>
