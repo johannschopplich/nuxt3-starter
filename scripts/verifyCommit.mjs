@@ -1,6 +1,5 @@
 // @ts-check
 // Invoked on the `commit-msg` git hook by simple-git-hooks
-// Modified from https://github.com/vitejs/vite/blob/main/scripts/verifyCommit.ts
 
 import { readFileSync } from 'node:fs'
 import colors from 'picocolors'
@@ -11,7 +10,7 @@ const msg = readFileSync(msgPath, 'utf-8').trim()
 
 const RELEASE_RE = /^v\d/
 const COMMIT_RE =
-  /^(revert: )?(feat|fix|docs|dx|refactor|perf|test|workflow|build|ci|chore|types|wip|release|deps)(\(.+\))?: .{1,50}/
+  /^(revert: )?(feat|fix|docs|style|refactor|perf|test|build|ci|chore)(\(.+\))?!?: .{1,50}/
 
 if (!RELEASE_RE.test(msg) && !COMMIT_RE.test(msg)) {
   console.log()
