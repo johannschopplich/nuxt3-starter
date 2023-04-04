@@ -9,8 +9,6 @@ export default defineNuxtConfig({
 
   unocss: {
     preflight: true,
-    wind: true,
-    icons: true,
   },
 
   typescript: {

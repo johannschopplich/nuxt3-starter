@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const { deploymentEnvironment } = useRuntimeConfig()
+</script>
+
 <template>
   <div
     v-if="deploymentEnvironment !== 'prod'"
@@ -11,7 +15,3 @@
     </p>
   </div>
 </template>
-
-<script setup lang="ts">
-const { deploymentEnvironment } = useRuntimeConfig()
-</script>
