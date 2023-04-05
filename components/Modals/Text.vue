@@ -8,6 +8,8 @@ const emit = defineEmits<{
 }>()
 
 const text = ref(props.text)
+const focusTarget = ref<HTMLElement | undefined>()
+useFocus(focusTarget, { initialValue: true })
 
 function close(value?: string | MouseEvent) {
   emit('close', typeof value === 'string' ? value : undefined)
@@ -32,6 +34,7 @@ function close(value?: string | MouseEvent) {
 
       <input
         id="email"
+        ref="focusTarget"
         v-model="text"
         type="email"
         name="email"

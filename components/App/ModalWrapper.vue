@@ -5,14 +5,16 @@ const emit = defineEmits<{
 
 const onClickOutsideTarget = ref<HTMLElement | undefined>()
 onClickOutside(onClickOutsideTarget, () => emit('close'))
+
+onKeyStroke('Escape', () => emit('close'))
 </script>
 
 <template>
   <div
     class="z-100 fixed inset-0 overflow-y-auto"
-    aria-labelledby="modal-title"
     role="dialog"
     aria-modal="true"
+    aria-labelledby="modal-title"
   >
     <div
       class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0"
