@@ -11,7 +11,7 @@ const { modals } = useModals(props.scope)
   <Transition name="fade">
     <div
       v-if="modals.length"
-      class="z-100 fixed inset-0 bg-gray-500 bg-opacity-50 backdrop-blur-sm"
+      class="fixed inset-0 z-100 bg-gray-500 bg-opacity-50 backdrop-blur-sm"
     />
   </Transition>
 

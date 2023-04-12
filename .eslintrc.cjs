@@ -1,10 +1,6 @@
 module.exports = {
   root: true,
-  extends: [
-    '@nuxt/eslint-config',
-    'plugin:tailwindcss/recommended',
-    'prettier',
-  ],
+  extends: ['@nuxt/eslint-config', '@unocss', 'prettier'],
   rules: {
     'sort-imports': [
       'error',
@@ -20,13 +16,6 @@ module.exports = {
       'error',
       { prefer: 'type-imports' },
     ],
-    'tailwindcss/classnames-order': 'warn',
-    'tailwindcss/enforces-negative-arbitrary-values': 'warn',
-    'tailwindcss/enforces-shorthand': 'warn',
-    'tailwindcss/migration-from-tailwind-2': 'off',
-    'tailwindcss/no-arbitrary-value': 'off',
-    'tailwindcss/no-custom-classname': 'off',
-    'tailwindcss/no-contradicting-classname': 'error',
     'vue/multi-word-component-names': 'off',
   },
 }

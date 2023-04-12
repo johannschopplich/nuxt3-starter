@@ -11,22 +11,22 @@ onKeyStroke('Escape', () => emit('close'))
 
 <template>
   <div
-    class="z-100 fixed inset-0 overflow-y-auto"
+    class="fixed inset-0 z-100 overflow-y-auto"
     role="dialog"
     aria-modal="true"
     aria-labelledby="modal-title"
   >
     <div
-      class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0"
+      class="min-h-full flex items-end justify-center p-4 text-center sm:items-center sm:p-0"
     >
       <div
         ref="onClickOutsideTarget"
-        class="relative transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-sm sm:p-6"
+        class="relative transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:max-w-sm sm:w-full sm:p-6"
       >
         <div class="absolute right-0 top-0 hidden pr-4 pt-4 sm:block">
           <button
             type="button"
-            class="flex rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+            class="flex rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             @click="emit('close')"
           >
             <span class="sr-only">Close</span>
