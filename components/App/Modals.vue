@@ -1,50 +1,85 @@
 <script setup lang="ts">
 const props = defineProps<{
   scope?: string
-  transition?: string
 }>()
 
 const { modals } = useModals(props.scope)
 </script>
 
 <template>
-  <Transition name="fade">
-    <div
-      v-if="modals.length"
-      class="fixed inset-0 z-100 bg-gray-500 bg-opacity-50 backdrop-blur-sm"
-    />
-  </Transition>
+  <div class="relative z-80">
+    <Transition name="background-fade">
+      <div
+        v-if="modals.length"
+        class="fixed inset-0 bg-gray-500 bg-opacity-50 backdrop-blur-sm"
+      />
+    </Transition>
 
-  <TransitionGroup :name="transition || 'default'">
-    <component
-      :is="modal.component"
-      v-for="(modal, i) in modals"
-      :key="`${modal.component}${i}`"
-      v-bind="modal.bindings"
-    />
-  </TransitionGroup>
+    <TransitionGroup name="content-fade">
+      <component
+        :is="(modal.component as any)"
+        v-for="(modal, i) in modals"
+        :key="`${modal.component}${i}`"
+        v-bind="modal.bindings"
+      />
+    </TransitionGroup>
+  </div>
 </template>
 
 <style scoped>
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1);
+.background-fade-enter-active {
+  transition: opacity 300ms ease-out;
 }
 
-.fade-enter-from,
-.fade-leave-to {
+.background-fade-leave-active {
+  transition: opacity 200ms ease-in;
+}
+
+.background-fade-enter-from,
+.background-fade-leave-to {
   opacity: 0;
 }
 
-.default-enter-active,
-.default-leave-active {
-  transition: opacity 300ms, transform 300ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+.background-fade-enter-to,
+.background-fade-leave-from {
+  opacity: 1;
 }
 
-.default-enter-from,
-.default-leave-to {
+.content-fade-enter-active {
+  transition: opacity 300ms ease-out, transform 300ms ease-out;
+}
+
+.content-fade-leave-active {
+  transition: opacity 200ms ease-in, transform 200ms ease-in;
+}
+
+.content-fade-enter-from {
   opacity: 0;
-  transform: translateY(5px) scale(0.95);
+  transform: translateY(4px) scale(0.95);
+}
+
+.content-fade-leave-to {
+  opacity: 0;
+  transform: translateY(4px) scale(0.95);
+}
+
+.content-fade-enter-to {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.content-fade-leave-from {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+@media screen and (min-width: 640px) {
+  .content-fade-enter-from {
+    transform: translateY(0) scale(0.95);
+  }
+
+  .content-fade-leave-to {
+    transform: translateY(0) scale(0.95);
+  }
 }
 </style>
