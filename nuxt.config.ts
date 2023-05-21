@@ -1,9 +1,19 @@
 export default defineNuxtConfig({
   modules: ['@pinia/nuxt', '@unocss/nuxt', '@vueuse/nuxt'],
 
-  runtimeConfig: {
-    public: {
-      deploymentEnvironment: 'dev',
+  $production: {
+    runtimeConfig: {
+      public: {
+        deploymentEnvironment: 'prod',
+      },
+    },
+  },
+
+  $development: {
+    runtimeConfig: {
+      public: {
+        deploymentEnvironment: 'dev',
+      },
     },
   },
 
@@ -14,5 +24,10 @@ export default defineNuxtConfig({
   typescript: {
     typeCheck: true,
     shim: false,
+    tsConfig: {
+      compilerOptions: {
+        moduleResolution: 'bundler',
+      },
+    },
   },
 })
