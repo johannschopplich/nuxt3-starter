@@ -25,7 +25,7 @@
     "@julr/unocss-preset-forms": "^0.0.5",
     "@nuxt/eslint-config": "^0.1.1",
     "@pinia/nuxt": "^0.4.11",
-    "@types/node": "^18.16.13",
+    "@types/node": "^18.16.14",
     "@unocss/eslint-config": "^0.52.0",
     "@unocss/nuxt": "^0.52.0",
     "@vueuse/nuxt": "^10.1.2",
@@ -40,14 +40,5 @@
     "typescript": "^5.0.4",
     "unocss": "^0.52.0",
     "vue-tsc": "^1.6.5"
-  },
-  "pnpm": {
-    "peerDependencyRules": {
-      "ignoreMissing": [
-        "vue",
-        "webpack",
-        "vite"
-      ]
-    }
   }
 }
