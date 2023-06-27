@@ -1,4 +1,4 @@
-import { nanoid } from 'nanoid'
+import { randomUUID } from 'uncrypto'
 import type { ComponentPublicInstance, Ref } from 'vue'
 
 type ComponentConstructor<
@@ -27,7 +27,7 @@ export function useModals(scope = '') {
     bindings: Bindings<T>
   ) {
     return new Promise<ReturnValue<T>>((resolve) => {
-      const id = nanoid()
+      const id = randomUUID()
 
       modals.value.push({
         id,
