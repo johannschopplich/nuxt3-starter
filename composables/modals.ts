@@ -1,23 +1,28 @@
 import { nanoid } from 'nanoid'
-import type { Ref } from 'vue'
+import type { ComponentPublicInstance, Ref } from 'vue'
 
-type Component = abstract new (...args: any) => any
+type ComponentConstructor<
+  T extends ComponentPublicInstance<Props> = ComponentPublicInstance<any>,
+  Props = any
+> = new (...args: any[]) => T
 
 interface Modal {
   id: string
-  component: Component
+  component: ComponentConstructor
   bindings: Record<string, any>
 }
 
-type Bindings<T extends Component> = InstanceType<T>['$props']
-type ReturnValue<T extends Component> = Parameters<Bindings<T>['onClose']>[0]
+type Bindings<T extends ComponentConstructor> = InstanceType<T>['$props']
+type ReturnValue<T extends ComponentConstructor> = Parameters<
+  Bindings<T>['onClose']
+>[0]
 
 const scopes: Record<string, Ref<Modal[]>> = {}
 
 export function useModals(scope = '') {
   const modals = (scopes[scope] = scopes[scope] ?? ref<Modal[]>([]))
 
-  async function open<T extends Component>(
+  async function open<T extends ComponentConstructor>(
     component: T,
     bindings: Bindings<T>
   ) {

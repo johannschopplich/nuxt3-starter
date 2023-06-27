@@ -33,6 +33,7 @@ onKeyStroke('Escape', () => emit('close'))
             <span class="i-carbon-close h-6 w-6" aria-hidden="true" />
           </button>
         </div>
+
         <slot />
       </div>
     </div>

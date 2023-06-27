@@ -17,7 +17,7 @@ const { modals } = useModals(props.scope)
 
     <TransitionGroup name="content-fade">
       <component
-        :is="(modal.component as any)"
+        :is="modal.component"
         v-for="(modal, i) in modals"
         :key="`${modal.component}${i}`"
         v-bind="modal.bindings"
