@@ -1,10 +1,7 @@
 import { randomUUID } from 'uncrypto'
 import type { ComponentPublicInstance, Ref } from 'vue'
 
-type ComponentConstructor<
-  T extends ComponentPublicInstance<Props> = ComponentPublicInstance<any>,
-  Props = any
-> = new (...args: any[]) => T
+type ComponentConstructor = new (...args: any[]) => ComponentPublicInstance<any>
 
 interface Modal {
   id: string
