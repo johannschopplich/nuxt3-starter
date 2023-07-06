@@ -46,11 +46,15 @@ const { modals } = useModals(props.scope)
 }
 
 .content-fade-enter-active {
-  transition: opacity 300ms ease-out, transform 300ms ease-out;
+  transition:
+    opacity 300ms ease-out,
+    transform 300ms ease-out;
 }
 
 .content-fade-leave-active {
-  transition: opacity 200ms ease-in, transform 200ms ease-in;
+  transition:
+    opacity 200ms ease-in,
+    transform 200ms ease-in;
 }
 
 .content-fade-enter-from {

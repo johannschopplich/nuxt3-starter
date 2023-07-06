@@ -23,7 +23,7 @@ const props = withDefaults(
   {
     name: undefined,
     defaultStyles: true,
-  }
+  },
 )
 
 // Auto-load icons
@@ -32,13 +32,13 @@ const icons = Object.fromEntries(
     ([key, value]) => {
       const filename = key.split('/').pop()!.split('.').shift()
       return [filename, value]
-    }
-  )
+    },
+  ),
 )
 
 const icon = ref<string | undefined>()
 const iconName = computed(() =>
-  props.name ? kebabCase(props.name) : undefined
+  props.name ? kebabCase(props.name) : undefined,
 )
 
 watch(iconName, loadIcon)
