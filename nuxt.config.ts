@@ -21,8 +21,12 @@ export default defineNuxtConfig({
     preflight: true,
   },
 
+  experimental: {
+    inlineSSRStyles: false,
+  },
+
   typescript: {
-    typeCheck: true,
+    typeCheck: 'build',
     shim: false,
     tsConfig: {
       compilerOptions: {
