@@ -22,16 +22,12 @@ export default defineNuxtConfig({
   },
 
   experimental: {
+    typescriptBundlerResolution: true,
     inlineSSRStyles: false,
   },
 
   typescript: {
     typeCheck: 'build',
     shim: false,
-    tsConfig: {
-      compilerOptions: {
-        moduleResolution: 'bundler',
-      },
-    },
   },
 })
