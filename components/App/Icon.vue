@@ -1,17 +1,3 @@
-<template>
-  <!-- eslint-disable vue/no-v-html -->
-  <span
-    v-if="icon"
-    :class="[
-      'children-[svg]:h-full children-[svg]:w-full',
-      defaultStyles && 'inline-block h-[1em] w-[1em] align-middle',
-    ]"
-    aria-hidden="true"
-    v-html="icon"
-  />
-  <!-- eslint-enable vue/no-v-html -->
-</template>
-
 <script setup lang="ts">
 import { kebabCase } from 'scule'
 
@@ -51,3 +37,15 @@ async function loadIcon(name?: string) {
   }
 }
 </script>
+
+<template>
+  <span
+    v-if="icon"
+    :class="[
+      'children-[svg]:h-full children-[svg]:w-full',
+      defaultStyles && 'inline-block h-[1em] w-[1em] align-middle',
+    ]"
+    aria-hidden="true"
+    v-html="icon"
+  />
+</template>
