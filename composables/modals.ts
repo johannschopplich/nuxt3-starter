@@ -1,4 +1,3 @@
-import { randomUUID } from 'uncrypto'
 import type { ComponentPublicInstance, Ref } from 'vue'
 
 type ComponentConstructor = new (...args: any[]) => ComponentPublicInstance<any>
@@ -17,14 +16,14 @@ type ReturnValue<T extends ComponentConstructor> = Parameters<
 const scopes: Record<string, Ref<Modal[]>> = {}
 
 export function useModals(scope = '') {
-  const modals = (scopes[scope] = scopes[scope] ?? ref<Modal[]>([]))
+  const modals = (scopes[scope] ??= ref<Modal[]>([]))
 
   async function open<T extends ComponentConstructor>(
     component: T,
     bindings: Bindings<T>,
   ) {
     return new Promise<ReturnValue<T>>((resolve) => {
-      const id = randomUUID()
+      const id = crypto.randomUUID()
 
       modals.value.push({
         id,
