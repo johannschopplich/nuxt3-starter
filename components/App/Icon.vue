@@ -41,10 +41,8 @@ async function loadIcon(name?: string) {
 <template>
   <span
     v-if="icon"
-    :class="[
-      'children-[svg]:h-full children-[svg]:w-full',
-      defaultStyles && 'inline-block h-[1em] w-[1em] align-middle',
-    ]"
+    class="children-[svg]:h-full children-[svg]:w-full"
+    :class="[defaultStyles && 'inline-block h-[1em] w-[1em] align-middle']"
     aria-hidden="true"
     v-html="icon"
   />

@@ -24,6 +24,7 @@ export default defineNuxtConfig({
   experimental: {
     typescriptBundlerResolution: true,
     inlineSSRStyles: false,
+    headNext: true,
   },
 
   typescript: {
