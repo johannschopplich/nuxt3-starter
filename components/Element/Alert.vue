@@ -7,7 +7,7 @@
       />
 
       <div class="ml-3">
-        <h3 class="text-sm font-medium text-emerald-800">
+        <h3 class="text-sm text-emerald-800 font-medium">
           <slot />
         </h3>
 
